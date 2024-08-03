@@ -20,7 +20,7 @@
             background: rgba(255, 255, 255, 0.9); /* Slight transparency */
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: none; /* Initially hidden */
+            display: block; /* Now visible */
         }
         .header {
             display: flex;
@@ -70,55 +70,9 @@
             font-size: 0.9rem;
             color: #666;
         }
-        .btn-aluno-monitor {
-            position: relative;
-            display: inline-flex;
-            align-items: center;
-            padding: 30px 60px; /* Increased size */
-            border: none;
-            border-radius: 5px;
-            font-size: 2rem; /* Increased font size */
-            color: #fff; /* Keeping text color white */
-            text-align: center;
-            cursor: pointer;
-            overflow: hidden;
-            background: none;
-            outline: none;
-        }
-        .btn-aluno-monitor video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transform: translate(-50%, -50%);
-            z-index: -1;
-            filter: brightness(50%); /* Decreasing brightness */
-        }
-        .btn-aluno-monitor span {
-            position: relative;
-            z-index: 1;
-            margin-left: 10px;
-        }
-        .btn-aluno-monitor img {
-            position: relative;
-            z-index: 1;
-            height: 40px; /* Adjust the size of the icon */
-            margin-right: 10px; /* Space between icon and text */
-        }
     </style>
 </head>
 <body>
-    <div style="text-align:center; margin-top: 50px;">
-        <button class="btn-aluno-monitor" onclick="toggleContainer()">
-            <video autoplay muted loop>
-                <source src="https://cdn.pixabay.com/video/2023/04/15/159029-818026300_large.mp4" type="video/mp4">
-            </video>
-            <img src="https://www.seduc.ce.gov.br/wp-content/uploads/sites/37/2021/04/002_marca_horizontal_color.png" alt="Seduc Icon">
-            <span>Aluno Monitor</span>
-        </button>
-    </div>
     <div class="container" id="infoContainer">
         <div class="header">
             <div class="icon-label">
@@ -223,7 +177,5 @@
             Lindemberg Santos Silva - Diretor Escolar
         </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
